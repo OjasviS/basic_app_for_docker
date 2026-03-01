@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: basic-app
+  labels:
+    app: basic-app
+spec:
+  type: ClusterIP
+  selector:
+    app: basic-app
+  ports:
+    - port: 80
+      targetPort: 8000
+      protocol: TCP
+      name: http

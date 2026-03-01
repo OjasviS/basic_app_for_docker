@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: basic-app-project
+  namespace: argocd
+spec:
+  description: "Project boundary for basic-app; minikube cluster, argo_deployed_resources namespace only."
+  # Allowed destinations: cluster + namespace
+  destinations:
+    - server: https://kubernetes.default.svc
+      namespace: argo_deployed_resources
+  # Optional: restrict which Git repos can be used (uncomment and set if needed)
+  # sourceRepos:
+  #   - https://github.com/your-username/your-repo.git
+  sourceNamespaces: []
+  clusterResourceWhitelist: []
+  namespaceResourceWhitelist: []
