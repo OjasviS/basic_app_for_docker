@@ -14,4 +14,10 @@ spec:
     - '*'
   sourceNamespaces: []
   clusterResourceWhitelist: []
-  namespaceResourceWhitelist: []
+  namespaceResourceWhitelist:
+    - group: apps
+      kind: Deployment
+    - group: ""
+      kind: Service
+    - group: networking.k8s.io
+      kind: Ingress
