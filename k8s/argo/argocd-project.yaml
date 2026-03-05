@@ -8,7 +8,7 @@ spec:
   # Allowed destinations: cluster + namespace
   destinations:
     - server: https://kubernetes.default.svc
-      namespace: argo_deployed_resources
+      namespace: argo-deployed-resources
   # Optional: restrict which Git repos can be used (uncomment and set if needed)
   sourceRepos:
     - '*'

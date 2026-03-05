@@ -13,7 +13,7 @@ spec:
 
   destination:
     server: https://kubernetes.default.svc
-    namespace: argo_deployed_resources
+    namespace: argo-deployed-resources
 
   syncPolicy:
     syncOptions:
