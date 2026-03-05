@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: basic-app
+  namespace: argocd
+spec:
+  project: basic-app-project
+
+  source:
+    repoURL: https://github.com/your-username/your-repo.git  # TODO: replace with your actual Git repo URL
+    path: k8s/app
+    targetRevision: main
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argo_deployed_resources
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
