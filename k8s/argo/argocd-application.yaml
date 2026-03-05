@@ -16,6 +16,8 @@ spec:
     namespace: argo_deployed_resources
 
   syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
     automated:
       prune: true
       selfHeal: true
