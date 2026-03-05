@@ -10,8 +10,8 @@ spec:
     - server: https://kubernetes.default.svc
       namespace: argo_deployed_resources
   # Optional: restrict which Git repos can be used (uncomment and set if needed)
-  # sourceRepos:
-  #   - https://github.com/your-username/your-repo.git
+  sourceRepos:
+    - '*'
   sourceNamespaces: []
   clusterResourceWhitelist: []
   namespaceResourceWhitelist: []
