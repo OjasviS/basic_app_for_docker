@@ -14,9 +14,8 @@ spec:
       labels:
         app: basic-app
     spec:
-      # Uncomment if using a private Docker Hub image:
-      # imagePullSecrets:
-      #   - name: regcred
+      imagePullSecrets:
+        - name: regcred
       containers:
         - name: basic-app
           image: ojasvi281103/basic-app:latest
