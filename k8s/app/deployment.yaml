@@ -18,7 +18,7 @@ spec:
         - name: regcred
       containers:
         - name: basic-app
-          image: ojasvi281103/basic-app:latest
+          image: ojasvi281103/ojasvi_repo:latest
           ports:
             - containerPort: 8000
           livenessProbe:
